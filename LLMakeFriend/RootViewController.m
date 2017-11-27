@@ -104,6 +104,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self setupChildVc:[[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil] title:@"首页" image:@"tabBar_home" selectedImage:@"tabBar_home_click" isHiddenNavgationBar:NO];
     [self setupChildVc:[[FindViewController alloc] initWithNibName:@"FindViewController" bundle:nil] title:@"发现" image:@"tabBar_find" selectedImage:@"tabBar_find_click" isHiddenNavgationBar:NO];
+    [self setupChildVc:[[AddViewController alloc] initWithNibName:@"AddViewController" bundle:nil] title:@"" image:@"plus" selectedImage:@"plus" isHiddenNavgationBar:NO];
     [self setupChildVc:[[NewsViewController alloc] initWithNibName:@"NewsViewController" bundle:nil] title:@"消息" image:@"tabBar_news" selectedImage:@"tabBar_news_click" isHiddenNavgationBar:NO];
     [self setupChildVc:[[MineViewController alloc] initWithNibName:@"MineViewController" bundle:nil] title:@"我的" image:@"tabBar_me" selectedImage:@"tabBar_me_click" isHiddenNavgationBar:NO];
     
@@ -111,7 +112,7 @@
     //  设置tabbar
     [[UITabBar appearance] setShadowImage:[[UIImage alloc] init]];
     // 设置自定义的tabbar
-    [self setCustomtabbar];
+//    [self setCustomtabbar];
 }
 #pragma mark - 设置自定义中心按钮
 - (void)setCustomtabbar{
@@ -127,11 +128,9 @@
 
 #pragma mark - 自定义中心按钮相应方法
 - (void)centerBtnClick:(UIButton *)btn{
-    
+    NSLog(@"cjh___:%@", self.viewControllers[2]);
     AddViewController * addVC = [[AddViewController alloc]initWithNibName:@"AddViewController" bundle:nil];
-    
     BaseNavigationController * nav = [[BaseNavigationController alloc]initWithRootViewController:addVC];
-    
     [self presentViewController:nav animated:YES completion:nil];
 //    [nav.navigationController pushViewController:addVC animated:YES];
 }

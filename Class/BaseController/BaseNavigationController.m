@@ -14,6 +14,15 @@
 
 @implementation BaseNavigationController
 
+-(instancetype)initWithRootViewController:(UIViewController *)rootViewController
+{
+    if (self = [super initWithRootViewController:rootViewController])
+    {
+        [self initialize];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     //解决自定义返回按钮后滑动手势失效的问题
@@ -21,7 +30,7 @@
 //    self.navigationBar.translucent = FALSE;
 }
 
-+ (void)initialize
+- (void)initialize
 {
     [[UINavigationBar appearance] setBarTintColor:[UIColor themeBlueColor]];
     //修改标题字体颜色及大小

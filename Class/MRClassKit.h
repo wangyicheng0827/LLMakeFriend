@@ -25,4 +25,6 @@
 
 #import "UIScrollView+EmptyDataSet.h"
 
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
 #endif /* MRClassKit_h */
