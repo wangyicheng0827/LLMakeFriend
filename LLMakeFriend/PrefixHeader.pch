@@ -1,0 +1,19 @@
+//
+//  PrefixHeader.pch
+//  LLMakeFriend
+//
+//  Created by xiaoqi on 2017/11/26.
+//  Copyright © 2017年 佳鹤  陈. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "MRClassKit.h"
+
+#import "MRCategoryKit.h"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
